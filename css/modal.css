@@ -175,4 +175,57 @@ body.modal-open {
         width: 95%;
         padding: 20px;
     }
+}
+
+/* Add these styles to your existing modal.css */
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-right: 10px;
+}
+
+.modal-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.review-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: #FFD700;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.review-button:hover {
+    background: #FFC700;
+    transform: translateY(-2px);
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .modal-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .modal-buttons {
+        align-self: flex-end;
+    }
+
+    .review-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
 } 

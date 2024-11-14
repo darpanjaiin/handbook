@@ -91,7 +91,6 @@ const cardContents = {
 // Modal functionality
 const modalOverlay = document.getElementById('modalOverlay');
 const modal = document.getElementById('modal');
-const modalClose = document.getElementById('modalClose');
 const modalContentDiv = document.getElementById('modalContent');
 const cards = document.querySelectorAll('.card');
 
@@ -117,7 +116,18 @@ cards.forEach((card, index) => {
     card.addEventListener('click', () => {
         const content = cardContents[index];
         const modalHTML = `
-            <h2>${content.title}</h2>
+            <div class="modal-header">
+                <h2>${content.title}</h2>
+                <div class="modal-buttons">
+                    <a href="https://g.page/r/your-google-review-link" 
+                       class="review-button" 
+                       target="_blank"
+                       aria-label="Leave a review on Google">
+                        ★ Enjoying the vibe? Drop a quick review
+                    </a>
+                    <button class="modal-close" onclick="closeModal()" aria-label="Close modal"></button>
+                </div>
+            </div>
             <div class="modal-list">
                 ${content.items.map((item, i) => `
                     <div class="list-item" style="--index: ${i}" onclick="handleSubheadingClick(${index}, ${i})">
@@ -185,9 +195,6 @@ function handleSubheadingClick(cardIndex, itemIndex) {
         }
     }, 300);
 }
-
-// Close modal when clicking the close button
-modalClose.addEventListener('click', closeModal);
 
 // Close modal when clicking outside
 modalOverlay.addEventListener('click', (e) => {

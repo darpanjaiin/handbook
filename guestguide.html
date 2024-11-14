@@ -265,9 +265,30 @@
             margin-bottom: 20px;
             padding-right: 40px;
         }
+
+        /* Add this new style for the map button */
+        .map-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgb(255, 77, 0);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            z-index: 100;
+            transition: transform 0.3s ease;
+        }
+
+        .map-button:hover {
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
+    <a href="property-map.html" class="map-button" target="_blank">The Map</a>
     <h1>All You Need for a Perfect Stay</h1>
     <div class="container">
         <!-- Card 1 -->

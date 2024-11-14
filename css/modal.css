@@ -197,8 +197,8 @@ body.modal-open {
     display: flex;
     align-items: center;
     padding: 8px 16px;
-    background: #FFD700;
-    color: #000;
+    background: #ff5733;
+    color: #ffffff;
     border: none;
     border-radius: 20px;
     font-size: 14px;
@@ -208,7 +208,7 @@ body.modal-open {
 }
 
 .review-button:hover {
-    background: #FFC700;
+    background:  #ff5733;
     transform: translateY(-2px);
 }
 

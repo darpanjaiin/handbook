@@ -45,13 +45,16 @@ p { margin-bottom: 15px; color: #444; }
     border-radius: 10px;
     margin: 20px 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
 }
 
 .section-image:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transform: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.section-image.loaded {
+    opacity: 1;
+    transform: none;
 }
 
 .back-button {
@@ -210,5 +213,63 @@ section ul li:before {
 @media (max-width: 768px) {
     .connection-info, .contact-info, .comfort-box, .comfort-tips {
         padding: 15px;
+    }
+}
+
+/* Fixed Back to Guide button */
+.back-button-fixed {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 12px 24px;
+    background: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-button-fixed:hover {
+    transform: translateY(-2px);
+    background: #333;
+}
+
+.back-button-fixed:focus {
+    outline: 3px solid #666;
+    outline-offset: 2px;
+}
+
+.back-button-fixed svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* Ensure proper font loading */
+.font-loaded {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .back-button-fixed {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+    }
+}
+
+/* Add high contrast mode support */
+@media (prefers-contrast: high) {
+    .back-button-fixed {
+        background: #000;
+        color: #fff;
+        outline: 2px solid #fff;
     }
 } 

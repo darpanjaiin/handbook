@@ -11,7 +11,7 @@ body {
 
 .container {
     max-width: 430px;
-    height: 100vh;
+    height: 80vh;
     margin: 0 auto;
     position: relative;
     background-image: url('https://images.unsplash.com/photo-1537956965359-7573183d1f57?auto=format&fit=crop&q=80');
@@ -116,4 +116,9 @@ body {
 
 .dot.active {
     background: white;
+}
+
+.tag {
+    color: white;
+    background-color: orange;
 } 

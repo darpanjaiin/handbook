@@ -8,7 +8,7 @@ const cardContents = {
         ]
     },
     1: {
-        title: "Pre-Arrival Essentials",
+        title: "Before You Arrive",
         items: [
             "What to Pack for Your Adventure",
             "Directions and Getting Here Smoothly",
@@ -18,7 +18,7 @@ const cardContents = {
         ]
     },
     2: {
-        title: "Your First Moments",
+        title: "When You Arrive",
         items: [
             "Quick Check-In & Welcome Treats",
             "Your Guide to Unpacking and Unwinding",
@@ -28,7 +28,43 @@ const cardContents = {
         ]
     },
     3: {
-        title: "Stay in Touch – Wi-Fi, AC, & Reception",
+        title: "If You Have Kids",
+        items: [
+            "Kids' Activities & Play Areas",
+            "Family-Friendly Dining Options",
+            "Childcare Services",
+            "Safety Guidelines for Children"
+        ]
+    },
+    4: {
+        title: "If You Love Adventures",
+        items: [
+            "Outdoor Activities & Trails",
+            "Adventure Sports Booking",
+            "Equipment Rentals",
+            "Guided Tours & Experiences"
+        ]
+    },
+    5: {
+        title: "Necessities & Convenience",
+        items: [
+            "24/7 Services & Support",
+            "Medical & Emergency Info",
+            "Daily Essentials & Supplies",
+            "Laundry & Housekeeping"
+        ]
+    },
+    6: {
+        title: "Shopping Nearby",
+        items: [
+            "Local Markets & Boutiques",
+            "Souvenir Shopping Guide",
+            "Mall Directions & Timings",
+            "Best Deals & Recommendations"
+        ]
+    },
+    7: {
+        title: "Wi-Fi & More",
         items: [
             "Connect to Wi-Fi in a Flash",
             "Setting Your Ideal Room Temperature",
@@ -37,8 +73,8 @@ const cardContents = {
             "Quick Tips for Staying Comfortable"
         ]
     },
-    4: {
-        title: "Hidden Gems & Amenities",
+    8: {
+        title: "Amenities",
         items: [
             "Poolside Paradise & Lounges",
             "The Fitness Hub – Your Space to Energize",
@@ -47,8 +83,8 @@ const cardContents = {
             "Hidden Corners for Quiet Moments"
         ]
     },
-    5: {
-        title: "Discover Nearby Adventures & Sights",
+    9: {
+        title: "Discover Nearby",
         items: [
             "Scenic Trails and Natural Wonders",
             "Top Local Cafés and Eateries",
@@ -57,8 +93,8 @@ const cardContents = {
             "Nightlife and Evening Entertainment"
         ]
     },
-    6: {
-        title: "Stay Safe – Our Tips & Guidelines",
+    10: {
+        title: "Safety Guidelines",
         items: [
             "Emergency Contact Information",
             "Health & Wellness Essentials",
@@ -67,8 +103,8 @@ const cardContents = {
             "Local Safety Tips You Should Know"
         ]
     },
-    7: {
-        title: "Leave Your Mark – Share Your Story",
+    11: {
+        title: "Share Your Experience",
         items: [
             "Leave a Review – It Matters!",
             "Capture Your Moments and Tag Us",
@@ -77,8 +113,8 @@ const cardContents = {
             "Rate Your Favorite Amenities"
         ]
     },
-    8: {
-        title: "Farewell",
+    12: {
+        title: "Until Next Time",
         items: [
             "Quick & Easy Check-Out Tips",
             "Leaving Feedback? We're All Ears",
@@ -153,42 +189,62 @@ function handleSubheadingClick(cardIndex, itemIndex) {
                     (itemIndex === 0 ? '#personal-greeting' : '#little-touches');
                 break;
                 
-            case 1: // Pre-arrival
+            case 1: // Pre-Arrival Essentials
                 const preArrivalAnchors = ['#packing', '#directions', '#requests', '#weather', '#pre-checkin'];
                 window.location.href = 'pre-arrival.html' + preArrivalAnchors[itemIndex];
                 break;
                 
-            case 2: // First Moments
+            case 2: // Your First Moments
                 const firstMomentsAnchors = ['#check-in', '#unpacking', '#orientation', '#resort-corners', '#settle-in'];
                 window.location.href = 'first-moments.html' + firstMomentsAnchors[itemIndex];
                 break;
                 
-            case 3: // Stay in Touch
+            case 3: // If You Have Kids (New)
+                const kidsAnchors = ['#activities', '#dining', '#childcare', '#safety'];
+                window.location.href = 'kids-guide.html' + kidsAnchors[itemIndex];
+                break;
+                
+            case 4: // If You Love Adventures (New)
+                const adventureAnchors = ['#activities', '#booking', '#rentals', '#tours'];
+                window.location.href = 'adventures-guide.html' + adventureAnchors[itemIndex];
+                break;
+                
+            case 5: // Necessities & Convenience (New)
+                const necessitiesAnchors = ['#services', '#medical', '#essentials', '#laundry'];
+                window.location.href = 'necessities-guide.html' + necessitiesAnchors[itemIndex];
+                break;
+                
+            case 6: // Shopping Nearby (New)
+                const shoppingAnchors = ['#markets', '#souvenirs', '#malls', '#deals'];
+                window.location.href = 'shopping-guide.html' + shoppingAnchors[itemIndex];
+                break;
+                
+            case 7: // Stay in Touch – Wi-Fi, AC, & Reception
                 const stayInTouchAnchors = ['#wifi', '#temperature', '#reception', '#troubleshooting', '#comfort-tips'];
                 window.location.href = 'stay-connected.html' + stayInTouchAnchors[itemIndex];
                 break;
                 
-            case 4: // Hidden Gems
+            case 8: // Hidden Gems & Amenities
                 const hiddenGemsAnchors = ['#pool', '#fitness', '#spa', '#dining', '#quiet-spots'];
                 window.location.href = 'amenities.html' + hiddenGemsAnchors[itemIndex];
                 break;
                 
-            case 5: // Discover Nearby
+            case 9: // Discover Nearby
                 const nearbyAnchors = ['#trails', '#cafes', '#family-activities', '#historical', '#nightlife'];
                 window.location.href = 'discover-nearby.html' + nearbyAnchors[itemIndex];
                 break;
                 
-            case 6: // Stay Safe
+            case 10: // Stay Safe
                 const safetyAnchors = ['#emergency', '#health', '#guidelines', '#etiquette', '#local-safety'];
                 window.location.href = 'safety.html' + safetyAnchors[itemIndex];
                 break;
                 
-            case 7: // Leave Your Mark
+            case 11: // Leave Your Mark
                 const reviewAnchors = ['#review', '#photos', '#memories', '#tips', '#rate'];
                 window.location.href = 'share-story.html' + reviewAnchors[itemIndex];
                 break;
                 
-            case 8: // Farewell
+            case 12: // Farewell
                 const farewellAnchors = ['#checkout', '#feedback', '#packing-tips', '#stay-in-touch'];
                 window.location.href = 'farewell.html' + farewellAnchors[itemIndex];
                 break;

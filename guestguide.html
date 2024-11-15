@@ -93,7 +93,7 @@
             width: fit-content;
             margin: 30px auto;
             padding: 12px 24px;
-            background: #000;
+            background: #ff4d00;
             color: white;
             text-decoration: none;
             border-radius: 25px;
@@ -292,6 +292,25 @@
         }
 
         .map-button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Add this CSS for the review button */
+        .review-button {
+            display: block;
+            width: fit-content; /* Adjust width to fit content */
+            margin: 20px auto;
+            padding: 8px 16px; /* Adjust padding for a smaller button */
+            background: #ff4d00; /* Match with back button */
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 12px; /* Smaller font size */
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .review-button:hover {
             transform: translateY(-2px);
         }
     </style>
@@ -503,6 +522,7 @@
     </div>
 
     <a href="index.html" class="back-button">Back to Home</a>
+    <a href="https://www.google.com/maps/place/Your+Business+Name/reviews" class="review-button" target="_blank">Feeling inspired? Leave a quick review and make our day!</a>
 
     <script src="js/modal.js"></script>
 </body>

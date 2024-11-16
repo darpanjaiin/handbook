@@ -272,4 +272,22 @@ section ul li:before {
         color: #fff;
         outline: 2px solid #fff;
     }
+}
+
+/* Add these styles for the review button */
+.review-button {
+    display: block;
+    background-color: #FF6B35;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.review-button:hover {
+    background-color: #ff8559;
 } 

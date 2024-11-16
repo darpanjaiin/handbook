@@ -27,24 +27,6 @@ const cardContents = {
             "Settle In and Feel Right at Home"
         ]
     },
-    3: {
-        title: "If You Have Kids",
-        items: [
-            "Kids' Activities & Play Areas",
-            "Family-Friendly Dining Options",
-            "Childcare Services",
-            "Safety Guidelines for Children"
-        ]
-    },
-    4: {
-        title: "If You Love Adventures",
-        items: [
-            "Outdoor Activities & Trails",
-            "Adventure Sports Booking",
-            "Equipment Rentals",
-            "Guided Tours & Experiences"
-        ]
-    },
     5: {
         title: "Necessities & Convenience",
         items: [
@@ -52,15 +34,6 @@ const cardContents = {
             "Medical & Emergency Info",
             "Daily Essentials & Supplies",
             "Laundry & Housekeeping"
-        ]
-    },
-    6: {
-        title: "Shopping Nearby",
-        items: [
-            "Local Markets & Boutiques",
-            "Souvenir Shopping Guide",
-            "Mall Directions & Timings",
-            "Best Deals & Recommendations"
         ]
     },
     7: {
@@ -113,7 +86,7 @@ const cardContents = {
             "Rate Your Favorite Amenities"
         ]
     },
-    12: {
+    13: {
         title: "Until Next Time",
         items: [
             "Quick & Easy Check-Out Tips",
@@ -199,24 +172,9 @@ function handleSubheadingClick(cardIndex, itemIndex) {
                 window.location.href = 'first-moments.html' + firstMomentsAnchors[itemIndex];
                 break;
                 
-            case 3: // If You Have Kids (New)
-                const kidsAnchors = ['#activities', '#dining', '#childcare', '#safety'];
-                window.location.href = 'kids-guide.html' + kidsAnchors[itemIndex];
-                break;
-                
-            case 4: // If You Love Adventures (New)
-                const adventureAnchors = ['#activities', '#booking', '#rentals', '#tours'];
-                window.location.href = 'adventures-guide.html' + adventureAnchors[itemIndex];
-                break;
-                
             case 5: // Necessities & Convenience (New)
                 const necessitiesAnchors = ['#services', '#medical', '#essentials', '#laundry'];
                 window.location.href = 'necessities-guide.html' + necessitiesAnchors[itemIndex];
-                break;
-                
-            case 6: // Shopping Nearby (New)
-                const shoppingAnchors = ['#markets', '#souvenirs', '#malls', '#deals'];
-                window.location.href = 'shopping-guide.html' + shoppingAnchors[itemIndex];
                 break;
                 
             case 7: // Stay in Touch – Wi-Fi, AC, & Reception
@@ -239,12 +197,12 @@ function handleSubheadingClick(cardIndex, itemIndex) {
                 window.location.href = 'safety.html' + safetyAnchors[itemIndex];
                 break;
                 
-            case 11: // Leave Your Mark
-                const reviewAnchors = ['#review', '#photos', '#memories', '#tips', '#rate'];
-                window.location.href = 'share-story.html' + reviewAnchors[itemIndex];
+            case 11: // Extended Stays and Services
+                const servicesAnchors = ['#extended-stay', '#late-checkout', '#housekeeping', '#transport', '#experiences'];
+                window.location.href = 'services.html' + servicesAnchors[itemIndex];
                 break;
                 
-            case 12: // Farewell
+            case 13: // Farewell
                 const farewellAnchors = ['#checkout', '#feedback', '#packing-tips', '#stay-in-touch'];
                 window.location.href = 'farewell.html' + farewellAnchors[itemIndex];
                 break;

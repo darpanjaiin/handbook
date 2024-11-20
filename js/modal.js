@@ -128,7 +128,7 @@ cards.forEach((card, index) => {
             <div class="modal-header">
                 <h2>${content.title}</h2>
                 <div class="modal-buttons">
-                    <a href="https://g.page/r/your-google-review-link" 
+                    <a href="reviewprompts.html" 
                        class="review-button" 
                        target="_blank"
                        aria-label="Leave a review on Google">
